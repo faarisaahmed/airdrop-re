@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airdrop-re"
+version = "0.1.0"
+description = "An independent, open implementation of the AirDrop protocol (receive and send from the terminal)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+sniff = ["bleak>=0.21"]
+
+[project.scripts]
+airdrop = "airdrop_re.cli:main"
+
+[tool.setuptools]
+packages = ["airdrop_re"]
